@@ -43,10 +43,7 @@ const router = express.Router();
 
 ////////////////////////// FOOD ////////////////////////////////
 // get all Food
-router.get(
-  "https://restaurant-ordering-system-c28u.onrender.com/api/foods",
-  showFoods
-);
+router.get("/api/foods", showFoods);
 
 // get single Food
 router.get("/api/foods/:id", showFoodById);
