@@ -40,16 +40,14 @@ app.use(router);
 //   app.get(/.*/, (req,res)=> res.sendFile(__dirname + '/public/index.html'));
 // }
 
-app.get('/api', function(req, res){
-  res.json({ message: 'Welcome to restaurant api' });
+app.get("/api", function (req, res) {
+  res.json({ message: "Welcome to restaurant api" });
 });
 
-app.use(express.static(path.join(__dirname, './restaurant_management/')));
-app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, './restaurant_management/index.html'))
+app.use(express.static(path.join(__dirname, "./restaurant_management/")));
+app.get("/*", function (req, res) {
+  res.sendFile(path.join(__dirname, "./restaurant_management/index.html"));
 });
-
-
 
 // PORT
 const PORT = process.env.PORT || 8001;
