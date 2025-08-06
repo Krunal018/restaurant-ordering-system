@@ -4,7 +4,7 @@
   "homepage": "../",
   "private": true,
   "scripts": {
-    "serve": "npm run build && cross-env PORT=${PORT:-3000} npx serve -s dist -l $PORT",
+    "serve": "npm run build && serve -s dist -l $PORT",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
