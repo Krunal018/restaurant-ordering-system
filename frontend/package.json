@@ -4,13 +4,14 @@
   "homepage": "../",
   "private": true,
   "scripts": {
-    "serve": "npm run build && npx serve -s dist",
+    "serve": "npm run build && cross-env PORT=${PORT:-3000} npx serve -s dist -l $PORT",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "axios": "^0.27.2",
     "core-js": "^3.8.3",
+    "cross-env": "^7.0.3",
     "serve": "^14.2.4",
     "vue": "^3.2.13",
     "vue-basic-alert": "^1.1.0",
